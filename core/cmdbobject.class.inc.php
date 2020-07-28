@@ -95,11 +95,13 @@ abstract class CMDBObject extends DBObject
 	protected static $m_oCurrChange = null;
 	protected static $m_sInfo = null; // null => the information is built in a standard way
 	protected static $m_sOrigin = null; // null => the origin is 'interactive'
-	
+
 	/**
 	 * Specify another change (this is mainly for backward compatibility)
+	 *
+	 * @param CMDBChange|null $oChange
 	 */
-	public static function SetCurrentChange(CMDBChange $oChange)
+	public static function SetCurrentChange($oChange)
 	{
 		self::$m_oCurrChange = $oChange;
 	}
